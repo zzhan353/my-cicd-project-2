@@ -25,8 +25,8 @@ jobs:
         run: npm install
       - name: Fix execute permissions
         run: chmod +x ./node_modules/.bin/*
-      - name: Run ESLint
-        run: npm run lint
+      - name: 💅 Run ESLint Directly
+        run: npx eslint --config eslint.config.js "**/*.js"
       - name: Run tests
         run: npm test
 
