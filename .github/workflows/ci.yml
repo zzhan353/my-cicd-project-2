@@ -54,33 +54,30 @@ jobs:
           # 修改 tags，为不同分支的镜像打上不同标签
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/my-cicd-project-2:${{ github.ref_name }}
 
-  # 任务3: 部署到 UAT 环境 (新！)
+  # 任务3: 部署到 UAT 环境
   deploy-to-uat:
     name: Deploy to UAT Runner
     needs: build-and-push
-    # 触发条件：只在推送到 uat 分支时运行
     if: github.ref == 'refs/heads/uat' && github.event_name == 'push'
-    runs-on: self-hosted # 假设 UAT 也部署到你的 Windows Runner
+    runs-on: self-hosted
     steps:
       - name: Deploy UAT to Local Docker
         run: |
           docker pull ${{ secrets.DOCKERHUB_USERNAME }}/my-cicd-project-2:uat
-          docker stop my-app-uat || true
-          docker rm my-app-uat || true
-          # 注意：我们将容器命名为 my-app-uat，并映射到 3001 端口，以避免和生产环境冲突
+          docker stop my-app-uat
+          docker rm my-app-uat
           docker run -d --name my-app-uat -p 3001:3000 ${{ secrets.DOCKERHUB_USERNAME }}/my-cicd-project-2:uat
 
-  # 任务4: 部署到生产环境 (之前是 deploy-to-windows)
+  # 任务4: 部署到生产环境
   deploy-to-production:
     name: Deploy to Production Runner
     needs: build-and-push
-    # 触发条件：只在推送到 main 分支时运行
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-    runs-on: self-hosted # 生产环境也部署到你的 Windows Runner
+    runs-on: self-hosted
     steps:
       - name: Deploy Production to Local Docker
         run: |
           docker pull ${{ secrets.DOCKERHUB_USERNAME }}/my-cicd-project-2:main
-          docker stop my-app-prod || true
-          docker rm my-app-prod || true
+          docker stop my-app-prod
+          docker rm my-app-prod
           docker run -d --name my-app-prod -p 3000:3000 ${{ secrets.DOCKERHUB_USERNAME }}/my-cicd-project-2:main
