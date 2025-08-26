@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
-    "test": "jest",
+    "test": "jest index.test.js",
     "lint": "eslint \"**/*.js\""
   },
   "keywords": [],
