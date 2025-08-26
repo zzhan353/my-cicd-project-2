@@ -5,10 +5,10 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-  "start": "node index.js",
-  "test": "jest index.test.js",
-  "lint": "eslint \"**/*.js\""
-},
+    "start": "node index.js",
+    "test": "jest index.test.js",
+    "lint": "eslint \"**/*.js\""
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
