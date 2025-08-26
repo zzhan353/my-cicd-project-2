@@ -49,7 +49,7 @@ jobs:
         with:
           context: .
           push: true
-          # !! 重要：如果需要，可以修改你的镜像名 !!
+          # !! 重要：我已经帮你把镜像名更新为新项目名 !!
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/my-cicd-project-2:latest
 
   # 任务3: 部署到你的 Windows 电脑
@@ -64,4 +64,4 @@ jobs:
           docker pull ${{ secrets.DOCKERHUB_USERNAME }}/my-cicd-project-2:latest
           docker stop my-app || true
           docker rm my-app || true
-          docker run -d --name my-app -p 3000:3000 ${{ secrets.DOCKERHUB_USERNAME }}/my-cicd-project-2:latest
+          docker run -d --name my-app -p 3000:3000 ${{ secrets.DOKERHUB_USERNAME }}/my-cicd-project-2:latest
