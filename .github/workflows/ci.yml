@@ -59,9 +59,11 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Deploy to Local Docker
-        # 我们甚至可以去掉 shell: powershell，让它使用 runner 的默认 shell
         run: |
           docker pull ${{ secrets.DOCKERHUB_USERNAME }}/my-cicd-project-2:latest
-          docker stop my-app || true
-          docker rm my-app || true
+          
+          # PowerShell way to stop/remove container and ignore errors if it doesn't exist
+          docker stop my-app -t 0
+          docker rm my-app
+          
           docker run -d --name my-app -p 3000:3000 ${{ secrets.DOCKERHUB_USERNAME }}/my-cicd-project-2:latest
