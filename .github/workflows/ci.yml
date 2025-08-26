@@ -3,13 +3,14 @@ name: Node.js CI/CD Workflow
 on:
   push:
     branches:
-      - "main"
-      - "feature/**"
+      - "main"         # -> 触发生产部署
+      - "uat"          # -> 触发 UAT 部署
+      - "feature/**"   # -> 仅触发 CI
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main", "uat" ] # -> PR到main或uat时，仅触发 CI
 
 jobs:
-  # 任务1: CI - 构建与测试
+  # 任务1: CI - 构建与测试 (保持不变)
   build-and-test:
     name: Build and Test
     runs-on: ubuntu-latest
@@ -21,20 +22,21 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
-      
-      # VVVV --- 在这里添加新步骤 --- VVVV
-      - name: Set npm registry to Taobao mirror
-        run: npm config set registry https://registry.npmmirror.com/
-
       - name: Install dependencies
         run: npm install
-      # ... (后面的步骤保持不变)
+      - name: Fix execute permissions
+        run: chmod +x ./node_modules/.bin/*
+      - name: Run ESLint
+        run: npm run lint
+      - name: Run tests
+        run: npm test
 
-  # 任务2: 构建并推送 Docker 镜像
+  # 任务2: 构建并推送 Docker 镜像 (需要修改)
   build-and-push:
     name: Build and Push Docker Image
     needs: build-and-test
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    # 修改触发条件：当推送到 main 或 uat 分支时都运行
+    if: (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/uat') && github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -49,21 +51,36 @@ jobs:
         with:
           context: .
           push: true
-          # !! 重要：我已经帮你把镜像名更新为新项目名 !!
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/my-cicd-project-2:latest
+          # 修改 tags，为不同分支的镜像打上不同标签
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/my-cicd-project-2:${{ github.ref_name }}
 
-  # 任务3: 部署到你的 Windows 电脑
-  deploy-to-windows:
-    name: Deploy to Windows Runner
+  # 任务3: 部署到 UAT 环境 (新！)
+  deploy-to-uat:
+    name: Deploy to UAT Runner
     needs: build-and-push
-    runs-on: self-hosted
+    # 触发条件：只在推送到 uat 分支时运行
+    if: github.ref == 'refs/heads/uat' && github.event_name == 'push'
+    runs-on: self-hosted # 假设 UAT 也部署到你的 Windows Runner
     steps:
-      - name: Deploy to Local Docker
+      - name: Deploy UAT to Local Docker
         run: |
-          docker pull ${{ secrets.DOCKERHUB_USERNAME }}/my-cicd-project-2:latest
-          
-          # PowerShell way to stop/remove container and ignore errors if it doesn't exist
-          docker stop my-app -t 0
-          docker rm my-app
-          
-          docker run -d --name my-app -p 3000:3000 ${{ secrets.DOCKERHUB_USERNAME }}/my-cicd-project-2:latest
+          docker pull ${{ secrets.DOCKERHUB_USERNAME }}/my-cicd-project-2:uat
+          docker stop my-app-uat || true
+          docker rm my-app-uat || true
+          # 注意：我们将容器命名为 my-app-uat，并映射到 3001 端口，以避免和生产环境冲突
+          docker run -d --name my-app-uat -p 3001:3000 ${{ secrets.DOCKERHUB_USERNAME }}/my-cicd-project-2:uat
+
+  # 任务4: 部署到生产环境 (之前是 deploy-to-windows)
+  deploy-to-production:
+    name: Deploy to Production Runner
+    needs: build-and-push
+    # 触发条件：只在推送到 main 分支时运行
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: self-hosted # 生产环境也部署到你的 Windows Runner
+    steps:
+      - name: Deploy Production to Local Docker
+        run: |
+          docker pull ${{ secrets.DOCKERHUB_USERNAME }}/my-cicd-project-2:main
+          docker stop my-app-prod || true
+          docker rm my-app-prod || true
+          docker run -d --name my-app-prod -p 3000:3000 ${{ secrets.DOCKERHUB_USERNAME }}/my-cicd-project-2:main
