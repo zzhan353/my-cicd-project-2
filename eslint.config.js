@@ -5,7 +5,7 @@ import jest from 'eslint-plugin-jest';
 
 export default [
   {
-    ignores: ["node_modules/"],
+    ignores: ["node_modules/", "actions-runner/"],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',

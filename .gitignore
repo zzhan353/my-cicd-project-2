@@ -1,5 +1,6 @@
 # Dependencies
 node_modules/
+actions-runner/
 
 # Local Environment Variables
 .env
