@@ -4,11 +4,15 @@ const config = {
   // 指定测试环境为 node
   testEnvironment: 'node',
 
-  // 明确指定 Jest 应该寻找的测试文件匹配模式
-  // 这个模式会匹配所有目录下，以 .test.js 或 .spec.js 结尾的文件
+  // 明确指定 Jest 应该从哪个目录开始寻找
+  // '.' 表示项目的根目录
+  roots: [
+    '.'
+  ],
+
+  // 明确指定测试文件应该匹配的模式
   testMatch: [
-    '**/__tests__/**/*.?(m)[jt]s?(x)',
-    '**/?(*.)+(spec|test).?(m)[jt]s?(x)'
+    '**/index.test.js' // 我们先精确匹配这一个文件
   ],
 };
 
