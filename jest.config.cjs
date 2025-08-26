@@ -1,19 +1,18 @@
-// jest.config.js
+// jest.config.cjs
+
 /** @type {import('jest').Config} */
 const config = {
-  // 指定测试环境为 node
   testEnvironment: 'node',
-
-  // 明确指定 Jest 应该从哪个目录开始寻找
-  // '.' 表示项目的根目录
   roots: [
     '.'
   ],
-
-  // 明确指定测试文件应该匹配的模式
+  // 使用 Jest 最基础、最不可能出错的默认匹配规则
+  // 它会匹配所有目录下以 .test.js 或 .spec.js 结尾的文件
   testMatch: [
-    '**/index.test.js' // 我们先精确匹配这一个文件
+    "**/__tests__/**/*.?(m)[jt]s?(x)",
+    "**/?(*.)+(spec|test).?(m)[jt]s?(x)"
   ],
 };
 
-export default config;
+// 使用 CommonJS 的导出方式
+module.exports = config;
