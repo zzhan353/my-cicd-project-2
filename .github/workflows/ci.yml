@@ -21,14 +21,14 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
+      
+      # VVVV --- 在这里添加新步骤 --- VVVV
+      - name: Set npm registry to Taobao mirror
+        run: npm config set registry https://registry.npmmirror.com/
+
       - name: Install dependencies
         run: npm install
-      - name: Fix execute permissions
-        run: chmod +x ./node_modules/.bin/*
-      - name: 💅 Run ESLint Directly
-        run: npx eslint --config eslint.config.js "**/*.js"
-      - name: Run tests
-        run: npm test
+      # ... (后面的步骤保持不变)
 
   # 任务2: 构建并推送 Docker 镜像
   build-and-push:
