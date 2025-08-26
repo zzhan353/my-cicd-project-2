@@ -7,7 +7,11 @@ WORKDIR /usr/src/app
 # 3. 复制 package.json 和 package-lock.json 到工作目录
 COPY package*.json ./
 
-# 4. 只安装生产环境所需的依赖
+# VVVV --- 在这里添加新指令 --- VVVV
+# 切换到淘宝 NPM 镜像源以解决速率限制问题
+RUN npm config set registry https://registry.npmmirror.com/
+
+# 只安装生产环境所需的依赖
 RUN npm install --only=production
 
 # 5. 将项目的所有代码复制到工作目录
