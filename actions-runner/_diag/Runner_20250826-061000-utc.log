@@ -1,0 +1,267 @@
+[2025-08-26 06:10:00Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2025-08-26 06:10:00Z INFO HostContext] Well known directory 'Bin': 'E:\my-cicd-project-2\actions-runner\bin'
+[2025-08-26 06:10:00Z INFO HostContext] Well known directory 'Root': 'E:\my-cicd-project-2\actions-runner'
+[2025-08-26 06:10:00Z INFO HostContext] Well known config file 'Credentials': 'E:\my-cicd-project-2\actions-runner\.credentials'
+[2025-08-26 06:10:00Z INFO HostContext] Well known directory 'Bin': 'E:\my-cicd-project-2\actions-runner\bin'
+[2025-08-26 06:10:00Z INFO HostContext] Well known directory 'Root': 'E:\my-cicd-project-2\actions-runner'
+[2025-08-26 06:10:00Z INFO HostContext] Well known config file 'Runner': 'E:\my-cicd-project-2\actions-runner\.runner'
+[2025-08-26 06:10:00Z INFO Listener] Runner is built for Windows (X64) - win-x64.
+[2025-08-26 06:10:00Z INFO Listener] RuntimeInformation: Microsoft Windows 10.0.26100.
+[2025-08-26 06:10:00Z INFO Listener] Version: 2.328.0
+[2025-08-26 06:10:00Z INFO Listener] Commit: 6f9a9110adce65f44ca6f7c0ae142b9cc6af937b
+[2025-08-26 06:10:00Z INFO Listener] Culture: en-US
+[2025-08-26 06:10:00Z INFO Listener] UI Culture: en-US
+[2025-08-26 06:10:00Z INFO HostContext] Well known directory 'Bin': 'E:\my-cicd-project-2\actions-runner\bin'
+[2025-08-26 06:10:00Z INFO HostContext] Well known directory 'Root': 'E:\my-cicd-project-2\actions-runner'
+[2025-08-26 06:10:00Z INFO Listener] Validating directory permissions for: 'E:\my-cicd-project-2\actions-runner'
+[2025-08-26 06:10:00Z INFO CommandLineParser] Parse
+[2025-08-26 06:10:00Z INFO CommandLineParser] Parsing 5 args
+[2025-08-26 06:10:00Z INFO CommandLineParser] parsing argument
+[2025-08-26 06:10:00Z INFO CommandLineParser] HasArgs: False
+[2025-08-26 06:10:00Z INFO CommandLineParser] Adding Command: configure
+[2025-08-26 06:10:00Z INFO CommandLineParser] parsing argument
+[2025-08-26 06:10:00Z INFO CommandLineParser] HasArgs: True
+[2025-08-26 06:10:00Z INFO CommandLineParser] arg: url
+[2025-08-26 06:10:00Z INFO CommandLineParser] parsing argument
+[2025-08-26 06:10:00Z INFO CommandLineParser] HasArgs: True
+[2025-08-26 06:10:00Z INFO CommandLineParser] Adding option 'url': 'https://github.com/zzhan353/my-cicd-project-2'
+[2025-08-26 06:10:00Z INFO CommandLineParser] parsing argument
+[2025-08-26 06:10:00Z INFO CommandLineParser] HasArgs: True
+[2025-08-26 06:10:00Z INFO CommandLineParser] arg: token
+[2025-08-26 06:10:00Z INFO CommandLineParser] parsing argument
+[2025-08-26 06:10:00Z INFO CommandLineParser] HasArgs: True
+[2025-08-26 06:10:00Z INFO CommandLineParser] Adding option 'token': '***'
+[2025-08-26 06:10:00Z INFO Listener] Arguments parsed
+[2025-08-26 06:10:00Z INFO Runner] ExecuteCommand
+[2025-08-26 06:10:00Z INFO ConfigurationStore] currentAssemblyLocation: E:\my-cicd-project-2\actions-runner\bin\Runner.Listener.dll
+[2025-08-26 06:10:00Z INFO HostContext] Well known directory 'Bin': 'E:\my-cicd-project-2\actions-runner\bin'
+[2025-08-26 06:10:00Z INFO ConfigurationStore] binPath: E:\my-cicd-project-2\actions-runner\bin
+[2025-08-26 06:10:00Z INFO HostContext] Well known directory 'Bin': 'E:\my-cicd-project-2\actions-runner\bin'
+[2025-08-26 06:10:00Z INFO HostContext] Well known directory 'Root': 'E:\my-cicd-project-2\actions-runner'
+[2025-08-26 06:10:00Z INFO ConfigurationStore] RootFolder: E:\my-cicd-project-2\actions-runner
+[2025-08-26 06:10:00Z INFO HostContext] Well known directory 'Bin': 'E:\my-cicd-project-2\actions-runner\bin'
+[2025-08-26 06:10:00Z INFO HostContext] Well known directory 'Root': 'E:\my-cicd-project-2\actions-runner'
+[2025-08-26 06:10:00Z INFO HostContext] Well known config file 'Runner': 'E:\my-cicd-project-2\actions-runner\.runner'
+[2025-08-26 06:10:00Z INFO ConfigurationStore] ConfigFilePath: E:\my-cicd-project-2\actions-runner\.runner
+[2025-08-26 06:10:00Z INFO HostContext] Well known directory 'Bin': 'E:\my-cicd-project-2\actions-runner\bin'
+[2025-08-26 06:10:00Z INFO HostContext] Well known directory 'Root': 'E:\my-cicd-project-2\actions-runner'
+[2025-08-26 06:10:00Z INFO HostContext] Well known config file 'MigratedRunner': 'E:\my-cicd-project-2\actions-runner\.runner_migrated'
+[2025-08-26 06:10:00Z INFO ConfigurationStore] MigratedConfigFilePath: E:\my-cicd-project-2\actions-runner\.runner_migrated
+[2025-08-26 06:10:00Z INFO HostContext] Well known directory 'Bin': 'E:\my-cicd-project-2\actions-runner\bin'
+[2025-08-26 06:10:00Z INFO HostContext] Well known directory 'Root': 'E:\my-cicd-project-2\actions-runner'
+[2025-08-26 06:10:00Z INFO HostContext] Well known config file 'Credentials': 'E:\my-cicd-project-2\actions-runner\.credentials'
+[2025-08-26 06:10:00Z INFO ConfigurationStore] CredFilePath: E:\my-cicd-project-2\actions-runner\.credentials
+[2025-08-26 06:10:00Z INFO HostContext] Well known directory 'Bin': 'E:\my-cicd-project-2\actions-runner\bin'
+[2025-08-26 06:10:00Z INFO HostContext] Well known directory 'Root': 'E:\my-cicd-project-2\actions-runner'
+[2025-08-26 06:10:00Z INFO HostContext] Well known config file 'MigratedCredentials': 'E:\my-cicd-project-2\actions-runner\.credentials_migrated'
+[2025-08-26 06:10:00Z INFO ConfigurationStore] MigratedCredFilePath: E:\my-cicd-project-2\actions-runner\.credentials_migrated
+[2025-08-26 06:10:00Z INFO HostContext] Well known directory 'Bin': 'E:\my-cicd-project-2\actions-runner\bin'
+[2025-08-26 06:10:00Z INFO HostContext] Well known directory 'Root': 'E:\my-cicd-project-2\actions-runner'
+[2025-08-26 06:10:00Z INFO HostContext] Well known config file 'Service': 'E:\my-cicd-project-2\actions-runner\.service'
+[2025-08-26 06:10:00Z INFO ConfigurationStore] ServiceConfigFilePath: E:\my-cicd-project-2\actions-runner\.service
+[2025-08-26 06:10:00Z INFO CommandSettings] Flag 'help': 'False'
+[2025-08-26 06:10:00Z INFO CommandSettings] Flag 'version': 'False'
+[2025-08-26 06:10:00Z INFO CommandSettings] Flag 'commit': 'False'
+[2025-08-26 06:10:00Z INFO CommandSettings] Flag 'check': 'False'
+[2025-08-26 06:10:00Z INFO CommandSettings] Command 'configure': 'True'
+[2025-08-26 06:10:00Z INFO Terminal] WRITE LINE: 
+[2025-08-26 06:10:00Z INFO Terminal] WRITE LINE: --------------------------------------------------------------------------------
+[2025-08-26 06:10:00Z INFO Terminal] WRITE LINE: |        ____ _ _   _   _       _          _        _   _                      |
+[2025-08-26 06:10:00Z INFO Terminal] WRITE LINE: |       / ___(_) |_| | | |_   _| |__      / \   ___| |_(_) ___  _ __  ___      |
+[2025-08-26 06:10:00Z INFO Terminal] WRITE LINE: |      | |  _| | __| |_| | | | | '_ \    / _ \ / __| __| |/ _ \| '_ \/ __|     |
+[2025-08-26 06:10:00Z INFO Terminal] WRITE LINE: |      | |_| | | |_|  _  | |_| | |_) |  / ___ \ (__| |_| | (_) | | | \__ \     |
+[2025-08-26 06:10:00Z INFO Terminal] WRITE LINE: |       \____|_|\__|_| |_|\__,_|_.__/  /_/   \_\___|\__|_|\___/|_| |_|___/     |
+[2025-08-26 06:10:00Z INFO Terminal] WRITE LINE: |                                                                              |
+[2025-08-26 06:10:00Z INFO Terminal] WRITE: |                       
+[2025-08-26 06:10:00Z INFO Terminal] WRITE: Self-hosted runner registration
+[2025-08-26 06:10:00Z INFO Terminal] WRITE LINE:                         |
+[2025-08-26 06:10:00Z INFO Terminal] WRITE LINE: |                                                                              |
+[2025-08-26 06:10:00Z INFO Terminal] WRITE LINE: --------------------------------------------------------------------------------
+[2025-08-26 06:10:00Z INFO ConfigurationManager] ConfigureAsync
+[2025-08-26 06:10:00Z INFO CommandSettings] Flag 'generateServiceConfig': 'False'
+[2025-08-26 06:10:00Z INFO ConfigurationStore] IsConfigured()
+[2025-08-26 06:10:00Z INFO ConfigurationStore] IsConfigured: False
+[2025-08-26 06:10:00Z INFO ConfigurationManager] Is configured: False
+[2025-08-26 06:10:00Z INFO CommandSettings] Arg 'url': 'https://github.com/zzhan353/my-cicd-project-2'
+[2025-08-26 06:10:00Z INFO CommandSettings] Remove url from Arg dictionary.
+[2025-08-26 06:10:00Z INFO CommandSettings] Arg 'token': '***'
+[2025-08-26 06:10:00Z INFO CommandSettings] Remove token from Arg dictionary.
+[2025-08-26 06:10:01Z INFO ConfigurationManager] Http response code: OK from 'POST https://api.github.com/actions/runner-registration' (E53F:1B8E7:E1235E2:E9975D2:68AD4FB9)
+[2025-08-26 06:10:01Z INFO ConfigurationManager] Using V2 flow: False
+[2025-08-26 06:10:01Z INFO ConfigurationManager] cred retrieved via GitHub auth
+[2025-08-26 06:10:01Z INFO RunnerServer] EstablishVssConnection
+[2025-08-26 06:10:01Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2025-08-26 06:10:01Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-08-26 06:10:01Z INFO RunnerServer] EstablishVssConnection
+[2025-08-26 06:10:01Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2025-08-26 06:10:01Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-08-26 06:10:01Z INFO RunnerServer] EstablishVssConnection
+[2025-08-26 06:10:01Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2025-08-26 06:10:01Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-08-26 06:10:02Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-08-26 06:10:02Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-08-26 06:10:02Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-08-26 06:10:02Z INFO Terminal] WRITE LINE: 
+[2025-08-26 06:10:02Z INFO ConfigurationManager] Test Connection complete.
+[2025-08-26 06:10:02Z INFO HostContext] Well known directory 'Bin': 'E:\my-cicd-project-2\actions-runner\bin'
+[2025-08-26 06:10:02Z INFO HostContext] Well known directory 'Root': 'E:\my-cicd-project-2\actions-runner'
+[2025-08-26 06:10:02Z INFO HostContext] Well known config file 'RSACredentials': 'E:\my-cicd-project-2\actions-runner\.credentials_rsaparams'
+[2025-08-26 06:10:02Z INFO RSAEncryptedFileKeyManager] Creating new RSA key using 2048-bit key length
+[2025-08-26 06:10:02Z INFO RSAEncryptedFileKeyManager] Successfully saved RSA key parameters to file E:\my-cicd-project-2\actions-runner\.credentials_rsaparams
+[2025-08-26 06:10:02Z INFO CommandSettings] Arg 'runnergroup': ''
+[2025-08-26 06:10:02Z INFO CommandSettings] Flag 'unattended': 'False'
+[2025-08-26 06:10:02Z INFO PromptManager] ReadValue
+[2025-08-26 06:10:02Z INFO Terminal] WRITE: Enter the name of the runner group to add this runner to: 
+[2025-08-26 06:10:02Z INFO Terminal] WRITE: [press Enter for Default] 
+[2025-08-26 06:10:02Z INFO Terminal] READ LINE
+[2025-08-26 06:10:03Z INFO Terminal] Read value: ''
+[2025-08-26 06:10:03Z INFO PromptManager] Falling back to the default: 'Default'
+[2025-08-26 06:10:03Z INFO Terminal] WRITE LINE: 
+[2025-08-26 06:10:03Z INFO ConfigurationManager] Found a self-hosted runner group with id 1 and name Default
+[2025-08-26 06:10:03Z INFO CommandSettings] Flag 'disableupdate': 'False'
+[2025-08-26 06:10:03Z INFO CommandSettings] Flag 'ephemeral': 'False'
+[2025-08-26 06:10:03Z INFO CommandSettings] Arg 'name': ''
+[2025-08-26 06:10:03Z INFO CommandSettings] Flag 'unattended': 'False'
+[2025-08-26 06:10:03Z INFO PromptManager] ReadValue
+[2025-08-26 06:10:03Z INFO Terminal] WRITE: Enter the name of runner: 
+[2025-08-26 06:10:03Z INFO Terminal] WRITE: [press Enter for DESKTOP-8F2FUJT] 
+[2025-08-26 06:10:03Z INFO Terminal] READ LINE
+[2025-08-26 06:10:05Z INFO Terminal] Read value: ''
+[2025-08-26 06:10:05Z INFO PromptManager] Falling back to the default: 'DESKTOP-8F2FUJT'
+[2025-08-26 06:10:05Z INFO Terminal] WRITE LINE: 
+[2025-08-26 06:10:05Z INFO CommandSettings] Arg 'labels': ''
+[2025-08-26 06:10:05Z INFO CommandSettings] Flag 'unattended': 'False'
+[2025-08-26 06:10:05Z INFO PromptManager] ReadValue
+[2025-08-26 06:10:05Z INFO Terminal] WRITE: This runner will have the following labels: 'self-hosted', 'Windows', 'X64' 
+Enter any additional labels (ex. label-1,label-2): 
+[2025-08-26 06:10:05Z INFO Terminal] WRITE: [press Enter to skip] 
+[2025-08-26 06:10:05Z INFO Terminal] READ LINE
+[2025-08-26 06:10:06Z INFO Terminal] Read value: ''
+[2025-08-26 06:10:06Z INFO Terminal] WRITE LINE: 
+[2025-08-26 06:10:07Z INFO CommandSettings] Flag 'disableupdate': 'False'
+[2025-08-26 06:10:07Z INFO CommandSettings] Flag 'no-default-labels': 'False'
+[2025-08-26 06:10:07Z INFO CommandSettings] Flag 'disableupdate': 'False'
+[2025-08-26 06:10:07Z INFO CommandSettings] Flag 'ephemeral': 'False'
+[2025-08-26 06:10:07Z INFO ConfigurationStore] Saving OAuth credential @ E:\my-cicd-project-2\actions-runner\.credentials
+[2025-08-26 06:10:07Z INFO ConfigurationStore] Credentials Saved.
+[2025-08-26 06:10:07Z INFO ConfigurationStore] HasCredentials()
+[2025-08-26 06:10:07Z INFO ConfigurationStore] stored True
+[2025-08-26 06:10:07Z INFO CredentialManager] GetCredentialProvider
+[2025-08-26 06:10:07Z INFO CredentialManager] Creating type OAuth
+[2025-08-26 06:10:07Z INFO CredentialManager] Creating credential type: OAuth
+[2025-08-26 06:10:07Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file E:\my-cicd-project-2\actions-runner\.credentials_rsaparams
+[2025-08-26 06:10:07Z INFO RunnerServer] EstablishVssConnection
+[2025-08-26 06:10:07Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2025-08-26 06:10:07Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-08-26 06:10:07Z INFO RunnerServer] EstablishVssConnection
+[2025-08-26 06:10:07Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2025-08-26 06:10:07Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-08-26 06:10:07Z INFO RunnerServer] EstablishVssConnection
+[2025-08-26 06:10:07Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2025-08-26 06:10:07Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-08-26 06:10:07Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-08-26 06:10:07Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-08-26 06:10:12Z ERR  GitHubActionsService] GET request to https://pipelinesghubeus9.actions.githubusercontent.com/jPfXnFZDzxAhNG4EfKv0CpHAAET78oBiDuOa8CyvTrEg4i2gGE/_apis/connectionData?connectOptions=0&lastChangeId=3989505&lastChangeId64=3989505 failed. System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.AuthenticationHelper.SendWithAuthAsync(HttpRequestMessage request, Uri authUri, Boolean async, ICredentials credentials, Boolean preAuthenticate, Boolean isProxyAuth, Boolean doRequestAuth, HttpConnectionPool pool, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at GitHub.Services.Common.VssHttpMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at GitHub.Services.Common.VssHttpRetryMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+[2025-08-26 06:10:12Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-08-26 06:10:12Z INFO RunnerServer] Catch exception during connect. 4 attempt left.
+[2025-08-26 06:10:12Z ERR  RunnerServer] System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at GitHub.Services.Common.VssHttpRetryMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync(HttpRequestMessage message, HttpCompletionOption completionOption, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpRequestMessage message, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.Location.Client.LocationHttpClient.GetConnectionDataAsync(ConnectOptions connectOptions, Int64 lastChangeId, CancellationToken cancellationToken, Object userState)
+   at GitHub.Services.WebApi.Location.VssServerDataProvider.GetConnectionDataAsync(ConnectOptions connectOptions, Int32 lastChangeId, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.Location.VssServerDataProvider.ConnectAsync(ConnectOptions connectOptions, CancellationToken cancellationToken)
+   at GitHub.Runner.Common.RunnerService.EstablishVssConnection(Uri serverUrl, VssCredentials credentials, TimeSpan timeout)
+[2025-08-26 06:10:12Z ERR  RunnerServer] #####################################################
+[2025-08-26 06:10:12Z ERR  RunnerServer] System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+[2025-08-26 06:10:12Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-08-26 06:10:28Z ERR  GitHubActionsService] GET request to https://pipelinesghubeus9.actions.githubusercontent.com/jPfXnFZDzxAhNG4EfKv0CpHAAET78oBiDuOa8CyvTrEg4i2gGE/_apis/connectionData?connectOptions=0&lastChangeId=3989505&lastChangeId64=3989505 failed. System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.AuthenticationHelper.SendWithAuthAsync(HttpRequestMessage request, Uri authUri, Boolean async, ICredentials credentials, Boolean preAuthenticate, Boolean isProxyAuth, Boolean doRequestAuth, HttpConnectionPool pool, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at GitHub.Services.Common.VssHttpMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at GitHub.Services.Common.VssHttpRetryMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+[2025-08-26 06:10:28Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-08-26 06:10:28Z INFO RunnerServer] Catch exception during connect. 3 attempt left.
+[2025-08-26 06:10:28Z ERR  RunnerServer] System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at GitHub.Services.Common.VssHttpRetryMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync(HttpRequestMessage message, HttpCompletionOption completionOption, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpRequestMessage message, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.Location.Client.LocationHttpClient.GetConnectionDataAsync(ConnectOptions connectOptions, Int64 lastChangeId, CancellationToken cancellationToken, Object userState)
+   at GitHub.Services.WebApi.Location.VssServerDataProvider.GetConnectionDataAsync(ConnectOptions connectOptions, Int32 lastChangeId, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.Location.VssServerDataProvider.ConnectAsync(ConnectOptions connectOptions, CancellationToken cancellationToken)
+   at GitHub.Runner.Common.RunnerService.EstablishVssConnection(Uri serverUrl, VssCredentials credentials, TimeSpan timeout)
+[2025-08-26 06:10:28Z ERR  RunnerServer] #####################################################
+[2025-08-26 06:10:28Z ERR  RunnerServer] System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+[2025-08-26 06:10:28Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-08-26 06:10:31Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-08-26 06:10:33Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file E:\my-cicd-project-2\actions-runner\.credentials_rsaparams
+[2025-08-26 06:10:33Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file E:\my-cicd-project-2\actions-runner\.credentials_rsaparams
+[2025-08-26 06:10:40Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2025-08-26 06:10:40Z WARN GitHubActionsService] Retrieving an AAD auth token took a long time (7.1212651 seconds)
+[2025-08-26 06:10:40Z INFO ConfigurationManager] Service enforced serverUrlV2: https://broker.actions.githubusercontent.com/
+[2025-08-26 06:10:40Z INFO ConfigurationManager] Service enforced useV2Flow: True
+[2025-08-26 06:10:40Z INFO CommandSettings] Arg 'work': ''
+[2025-08-26 06:10:40Z INFO CommandSettings] Flag 'unattended': 'False'
+[2025-08-26 06:10:40Z INFO PromptManager] ReadValue
+[2025-08-26 06:10:40Z INFO Terminal] WRITE: Enter name of work folder: 
+[2025-08-26 06:10:40Z INFO Terminal] WRITE: [press Enter for _work] 
+[2025-08-26 06:10:40Z INFO Terminal] READ LINE
+[2025-08-26 06:10:54Z INFO Terminal] Read value: ''
+[2025-08-26 06:10:54Z INFO PromptManager] Falling back to the default: '_work'
+[2025-08-26 06:10:54Z INFO ConfigurationStore] Saving runner settings.
+[2025-08-26 06:10:54Z INFO ConfigurationStore] Settings Saved.
+[2025-08-26 06:10:54Z INFO Terminal] WRITE LINE: 
+[2025-08-26 06:10:54Z INFO Terminal] WRITE LINE: 
+[2025-08-26 06:10:54Z INFO CommandSettings] Flag 'runasservice': 'False'
+[2025-08-26 06:10:54Z INFO CommandSettings] Flag 'unattended': 'False'
+[2025-08-26 06:10:54Z INFO PromptManager] ReadValue
+[2025-08-26 06:10:54Z INFO Terminal] WRITE: Would you like to run the runner as service? (Y/N) 
+[2025-08-26 06:10:54Z INFO Terminal] WRITE: [press Enter for N] 
+[2025-08-26 06:10:54Z INFO Terminal] READ LINE
+[2025-08-26 06:10:58Z INFO Terminal] Read value: ''
+[2025-08-26 06:10:58Z INFO PromptManager] Falling back to the default: 'N'
+[2025-08-26 06:10:58Z INFO Listener] Runner execution has finished with return code 0
