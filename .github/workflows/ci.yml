@@ -80,4 +80,4 @@ jobs:
           docker pull ${{ secrets.DOCKERHUB_USERNAME }}/my-cicd-project-2:main
           docker stop my-app-prod
           docker rm my-app-prod
-          docker run -d --name my-app-prod -p 3000:3000 ${{ secrets.DOCKERHUB_USERNAME }}/my-cicd-project-2:main
+          docker run -d --name my-app-prod -p 3002:3000 ${{ secrets.DOCKERHUB_USERNAME }}/my-cicd-project-2:main
