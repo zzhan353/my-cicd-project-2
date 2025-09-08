@@ -10,19 +10,59 @@ on:
     branches: [ "main", "uat" ]
 
 jobs:
+  # ===============================================================
+  # JOB 1: Continuous Integration (CI)
+  # - Lints, tests the code, and uploads coverage report.
+  # ===============================================================
   build-and-test:
     name: Build and Test
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      # 步骤 1: 检出代码
+      # - 把你的代码仓库下载到 CI 虚拟机上
+      - name: ⬇️ Checkout repository
+        uses: actions/checkout@v4
+
+      # 步骤 2: 设置 Node.js 环境
+      # - 安装 Node.js，并启用 npm 依赖缓存以加快速度
+      - name: ⚙️ Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
-      - run: npm install
-      - run: chmod +x ./node_modules/.bin/*
-      - run: npm run lint
-      - run: npm test
+
+      # 步骤 3: 安装所有依赖
+      # - 运行 npm install 来安装 package.json 中定义的所有包
+      - name: 📦 Install dependencies
+        run: npm install
+
+      # 步骤 4: 修复脚本执行权限
+      # - 解决在 Linux 环境下可能出现的 'permission denied' 问题
+      - name: 🔑 Fix execute permissions
+        run: chmod +x ./node_modules/.bin/*
+
+      # 步骤 5: 运行代码风格检查
+      # - 执行在 package.json 中定义的 'lint' 脚本
+      - name: 💅 Run ESLint
+        run: npm run lint
+
+      # 步骤 6: 运行测试并生成覆盖率报告
+      # - 执行在 package.json 中定义的 'test' 脚本
+      # - 我们已经在 package.json 中为 'test' 脚本加上了 '--coverage' 参数
+      - name: 🧪 Run tests and generate coverage
+        run: npm test
+
+      # 步骤 7: 上传覆盖率报告到 Codecov (新！)
+      # - 使用 Codecov 官方的 Action
+      # - 它会自动找到生成的覆盖率报告并上传
+      - name: 📤 Upload coverage to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          # 使用我们之前在仓库 Secrets 中配置的 Token
+          token: ${{ secrets.CODECOV_TOKEN }}
+          # 如果上传失败，则让整个 CI 任务失败，这是一个好的实践
+          fail_ci_if_error: true
 
   build-and-push:
     name: Build and Push Docker Image

@@ -4,3 +4,6 @@ actions-runner/
 
 # Local Environment Variables
 .env
+
+# Test reports
+coverage/
