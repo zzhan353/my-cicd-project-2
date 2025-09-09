@@ -54,3 +54,13 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running in ${ENVIRONMENT} mode on http://localhost:${PORT}`);
 });
+
+
+//... (你现有的 express 服务器代码) ...
+
+app.listen(PORT, () => {
+  console.log(`Server is running in ${ENVIRONMENT} mode on http://localhost:${PORT}`);
+});
+
+// 使用 export default 导出 app
+export default app;
