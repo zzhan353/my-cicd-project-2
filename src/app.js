@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, '../public'))); // 注意路径变化
+app.use(express.static(path.join(__dirname, '../public')));
 
 const ENVIRONMENT = process.env.NODE_ENV || 'Development';
 
@@ -23,9 +23,27 @@ const getEnvDetails = () => {
 };
 
 app.get('/', (req, res) => {
-  const envDetails = getEnvDetails();
-  res.send(`...`); // (HTML 内容保持不变)
+  // 在这里调用，确保每次请求都能获取正确的环境详情
+  const envDetails = getEnvDetails(); 
+  
+  res.send(`
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CI/CD Deployment Successful!</title>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="env-badge ${envDetails.class}">${envDetails.text}</div>
+            <h1 class="title">DEPLOYED</h1>
+            <p class="subtitle">CI/CD Pipeline Executed Successfully</p>
+        </div>
+    </body>
+    </html>
+  `);
 });
 
-// 将 app 对象导出，但不在这里启动它！
 export default app;
