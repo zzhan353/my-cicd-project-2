@@ -4,12 +4,19 @@
 const config = {
   testEnvironment: 'node',
   
-  // 告诉 Jest 主动去收集这些文件的覆盖率信息
-  // 我们指向所有在 src/ 目录下的 .js 文件
-  // 注意：你需要先把你的 index.js 移动到 src/ 目录下
+  // 告诉 Jest，你的所有测试都在 tests/ 目录下
+  roots: [
+    '<rootDir>/tests'
+  ],
+
+  // 告诉 Jest，只匹配 tests/ 目录下的 .test.js 文件
+  testMatch: [
+    '**/tests/**/*.test.js'
+  ],
+
+  // 告诉 Jest，去 src/ 目录下收集覆盖率
   collectCoverageFrom: [
     'src/**/*.js',
-    // 如果有其他目录，也加进来
   ],
 };
 
