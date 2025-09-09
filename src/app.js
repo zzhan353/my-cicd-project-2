@@ -1,22 +1,17 @@
-// index.js
+// src/app.js
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-// ES Module a 環境下獲取 __dirname 的標準方法
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-const PORT = 3000;
 
-// 設置一個中間件，來提供 public 文件夾下的靜態文件
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../public')));
 
-// 讀取環境變量來判斷當前環境，如果沒有就默認為 'Development'
 const ENVIRONMENT = process.env.NODE_ENV || 'Development';
 
-// 根據環境決定 badge 的樣式和文本
 const getEnvDetails = () => {
   if (ENVIRONMENT.toLowerCase().startsWith('prod')) {
     return { class: 'env-prod', text: 'Production' };
@@ -27,10 +22,10 @@ const getEnvDetails = () => {
   return { class: 'env-dev', text: 'Development' };
 };
 
-// 根路由，現在會渲染一個完整的 HTML 頁面
 app.get('/', (req, res) => {
-  const envDetails = getEnvDetails();
-
+  // 在这里调用，确保每次请求都能获取正确的环境详情
+  const envDetails = getEnvDetails(); 
+  
   res.send(`
     <!DOCTYPE html>
     <html lang="en">
@@ -51,6 +46,4 @@ app.get('/', (req, res) => {
   `);
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running in ${ENVIRONMENT} mode on http://localhost:${PORT}`);
-});
+export default app;
