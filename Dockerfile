@@ -5,6 +5,7 @@ FROM node:20-alpine
 WORKDIR /usr/src/app
 
 # 3. 复制 package.json 和 package-lock.json 到工作目录
+COPY src/ ./src/
 COPY package*.json ./
 
 # VVVV --- 在这里添加新指令 --- VVVV
@@ -21,4 +22,4 @@ COPY . .
 EXPOSE 3000
 
 # 7. 定义容器启动时要执行的命令
-CMD [ "node", "index.js" ]
+CMD [ "node", "src/index.js" ]

@@ -2,10 +2,10 @@
   "name": "my-cicd-project-2",
   "version": "1.0.0",
   "description": "A fresh start for the CI/CD project.",
-  "main": "index.js",
+  "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js",
+    "start": "src/node index.js",
     "test": "jest --coverage index.test.js",
     "lint": "eslint \"**/*.js\""
   },

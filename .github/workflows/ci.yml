@@ -59,8 +59,9 @@ jobs:
       - name: 📤 Upload coverage to Codecov
         uses: codecov/codecov-action@v4
         with:
-          # 我们不再需要 token 了
-          enable_path_fixes: true
+          # 使用我们之前在仓库 Secrets 中配置的 Token
+          token: ${{ secrets.CODECOV_TOKEN }}
+          # 如果上传失败，则让整个 CI 任务失败，这是一个好的实践
           fail_ci_if_error: true
 
   build-and-push:
