@@ -1,5 +1,9 @@
 name: Node.js CI/CD Workflow
 
+# VVVV --- 在这里添加全局权限设置 --- VVVV
+permissions:
+  contents: read # 全局默认权限为只读
+
 on:
   push:
     branches:
@@ -17,6 +21,12 @@ jobs:
   build-and-test:
     name: Build and Test
     runs-on: ubuntu-latest
+
+        # 我们需要为这个任务单独授予写权限，以便 Codecov 和 CodeQL 能发表状态评论
+    permissions:
+      contents: read
+      security-events: write
+      pull-requests: write # Codecov 需要写评论的权限
 
     steps:
       # 步骤 1: 检出代码
