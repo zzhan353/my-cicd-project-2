@@ -142,7 +142,7 @@ jobs:
       
       # VVVV --- 新增的强制清理和安装步骤 --- VVVV
       - name: Force clean install of all dependencies
-        run: npm ci
+        run: npm install
 
       - name: Run semantic-release
         env:
