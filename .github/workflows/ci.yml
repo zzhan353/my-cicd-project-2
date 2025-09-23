@@ -120,31 +120,42 @@ jobs:
           docker run -d --name my-app-prod -p 3002:3000 -e NODE_ENV=production ${{ secrets.DOCKERHUB_USERNAME }}/my-cicd-project-2:main
 
 
-  # VVVV --- 在这里添加全新的 Release 任务 --- VVVV
+  # ===============================================================
+  # JOB 5: Create Automated Release
+  # - Runs only on the 'main' branch after a successful deployment.
+  # - Analyzes commits, bumps version, generates changelog, and creates a GitHub Release.
+  # ===============================================================
   release:
     name: Create Release
+    # 确保在生产部署成功后才运行
     needs: deploy-to-production
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repository
+      # 步骤 1: 检出代码
+      # - fetch-depth: 0 是为了获取所有历史记录，以便 semantic-release 分析
+      # - token 是为了让后续步骤有权限推送 commit 和 tag
+      - name: ⬇️ Checkout repository
         uses: actions/checkout@v4
         with:
-          # 获取所有历史记录，以便 semantic-release 分析
           fetch-depth: 0
-          # 为了能推送回仓库，我们需要一个有写权限的 token
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Setup Node.js
+      # 步骤 2: 设置 Node.js 环境
+      - name: ⚙️ Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          # 在这个任务中，我们不使用缓存，确保每次都是最纯净的安装
-      
-      # VVVV --- 新增的强制清理和安装步骤 --- VVVV
-      - name: Force clean install of all dependencies
-        run: npm install
 
-      - name: Run semantic-release
+      # 步骤 3: 安装所有依赖 (包括 devDependencies)
+      # - 使用 --include=dev 强制安装开发依赖，这对于 release 流程至关重要
+      - name: 📦 Install all dependencies
+        run: npm install --include=dev
+
+      # 步骤 4: 运行 semantic-release
+      # - 使用 npx 来保证命令能被正确找到和执行
+      - name: 🚀 Run semantic-release
         env:
+          # GITHUB_TOKEN 是由 GitHub Actions 自动提供的，拥有推送权限
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: ./node_modules/.bin/semantic-release
+        run: npx semantic-release
