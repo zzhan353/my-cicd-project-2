@@ -158,4 +158,4 @@ jobs:
         env:
           # GITHUB_TOKEN 是由 GitHub Actions 自动提供的，拥有推送权限
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx semantic-release
+        run: ./node_modules/.bin/semantic-release
