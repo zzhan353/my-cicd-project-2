@@ -2,7 +2,9 @@ name: Node.js CI/CD Workflow
 
 # VVVV --- 在这里添加全局权限设置 --- VVVV
 permissions:
-  contents: read # 全局默认权限为只读
+  contents: write # 提升权限，因为 release 任务需要写回 commit 和 tag
+  pull-requests: write
+  security-events: write
 
 on:
   push:
@@ -116,3 +118,29 @@ jobs:
           docker stop my-app-prod
           docker rm my-app-prod
           docker run -d --name my-app-prod -p 3002:3000 -e NODE_ENV=production ${{ secrets.DOCKERHUB_USERNAME }}/my-cicd-project-2:main
+
+
+  # VVVV --- 在这里添加全新的 Release 任务 --- VVVV
+  release:
+    name: Create Release
+    # 确保在生产部署成功后才运行
+    needs: deploy-to-production
+    runs-on: ubuntu-latest
+    steps:
+      # 检出代码，fetch-depth: 0 是为了获取所有历史记录，semantic-release 需要它
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install dependencies
+        run: npm install
+      # 运行 semantic-release
+      - name: Run semantic-release
+        env:
+          # GITHUB_TOKEN 是由 GitHub Actions 自动提供的，拥有推送权限
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx semantic-release
