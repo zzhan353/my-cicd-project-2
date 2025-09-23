@@ -123,24 +123,28 @@ jobs:
   # VVVV --- 在这里添加全新的 Release 任务 --- VVVV
   release:
     name: Create Release
-    # 确保在生产部署成功后才运行
     needs: deploy-to-production
     runs-on: ubuntu-latest
     steps:
-      # 检出代码，fetch-depth: 0 是为了获取所有历史记录，semantic-release 需要它
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
+          # 获取所有历史记录，以便 semantic-release 分析
           fetch-depth: 0
+          # 为了能推送回仓库，我们需要一个有写权限的 token
+          token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Install dependencies
-        run: npm install
-      # 运行 semantic-release
+          # 在这个任务中，我们不使用缓存，确保每次都是最纯净的安装
+      
+      # VVVV --- 新增的强制清理和安装步骤 --- VVVV
+      - name: Force clean install of all dependencies
+        run: npm ci
+
       - name: Run semantic-release
         env:
-          # GITHUB_TOKEN 是由 GitHub Actions 自动提供的，拥有推送权限
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npm run release
+        run: npx semantic-release
