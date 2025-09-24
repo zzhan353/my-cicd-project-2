@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/zzhan353/my-cicd-project-2/compare/v1.0.1...v1.1.0) (2025-09-24)
+
+
+### Features
+
+* **api:** Add /about endpoint ([15d3839](https://github.com/zzhan353/my-cicd-project-2/commit/15d3839f865b2286ece056757f1f508c42a1cc1b))
+
 ## [1.0.1](https://github.com/zzhan353/my-cicd-project-2/compare/v1.0.0...v1.0.1) (2025-09-24)
 
 
