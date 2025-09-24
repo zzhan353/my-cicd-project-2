@@ -6,9 +6,10 @@
   "type": "module",
   "scripts": {
     "start": "src/node index.js",
-    "test": "NODE_OPTIONS=--experimental-vm-modules jest --coverage",
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage",
     "lint": "eslint \"**/*.js\"",
-    "release": "npx semantic-release"
+    "release": "npx semantic-release",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
@@ -17,10 +18,14 @@
     "express": "^4.19.2"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
     "@eslint/js": "^9.4.0",
+    "cross-env": "^10.0.0",
     "eslint": "^9.4.0",
     "eslint-plugin-jest": "^28.6.0",
     "globals": "^15.4.0",
+    "husky": "^9.1.7",
     "jest": "^29.7.0",
     "supertest": "^7.0.0"
   }
