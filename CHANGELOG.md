@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/zzhan353/my-cicd-project-2/compare/v1.0.0...v1.0.1) (2025-09-24)
+
+
+### Bug Fixes
+
+* **docs:** Update README from VS Code ([394787c](https://github.com/zzhan353/my-cicd-project-2/commit/394787cddddea1937d3d9e224c7fd0b3f186cf33))
+
 # 1.0.0 (2025-09-24)
 
 
