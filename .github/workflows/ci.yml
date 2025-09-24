@@ -142,30 +142,10 @@ jobs:
         with:
           node-version: '20'
 
-      # VVVV --- 以下是全新的、带有诊断的步骤 --- VVVV
-
-      - name: 🧐 1. DIAGNOSE - Before Install
-        run: |
-          echo "Current Directory: $(pwd)"
-          echo "--- Files in current directory ---"
-          ls -la
-
-      - name: 📦 Install all dependencies
-        run: npm install --include=dev
-
-      - name: 🧐 2. DIAGNOSE - After Install
-        run: |
-          echo "Current Directory: $(pwd)"
-          echo "--- Files in current directory ---"
-          ls -la
-          echo "--- Does node_modules exist? ---"
-          ls -la ./node_modules
-          echo "--- Does .bin directory exist? ---"
-          ls -la ./node_modules/.bin
-          echo "--- Does semantic-release command exist? ---"
-          ls -la ./node_modules/.bin/semantic-release
+      # 我们不再需要 npm install 这一步了
 
       - name: 🚀 Run semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx semantic-release
+        # VVVV --- 使用这个最终的、绝对可靠的命令 --- VVVV
+        run: npx --package semantic-release --package @semantic-release/changelog --package @semantic-release/git semantic-release
