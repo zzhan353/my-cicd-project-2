@@ -12,3 +12,18 @@ describe('GET /', () => {
     expect(response.text).toContain('CI/CD Pipeline Executed Successfully');
   });
 });
+
+
+// VVVV --- 把这段代码粘贴到 describe('GET /', ...) 后面 --- VVVV
+
+describe('GET /about', () => {
+  it('should respond with the about page', async () => {
+    const response = await request(app)
+      .get('/about')
+      .expect(200);
+    
+    expect(response.text).toContain('About Our Awesome Company');
+  });
+});
+
+// ^^^^ --- 粘贴到这里 --- ^^^^
