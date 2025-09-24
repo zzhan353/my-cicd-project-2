@@ -46,4 +46,12 @@ app.get('/', (req, res) => {
   `);
 });
 
+// VVVV --- 把这段代码粘贴到 app.get('/') 后面 --- VVVV
+
+app.get('/about', (req, res) => {
+  res.send('<h1>About Our Awesome Company</h1>');
+});
+
+// ^^^^ --- 粘贴到这里 --- ^^^^
+
 export default app;
