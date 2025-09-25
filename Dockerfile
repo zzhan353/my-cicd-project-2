@@ -13,7 +13,7 @@ COPY package*.json ./
 RUN npm config set registry https://registry.npmmirror.com/
 
 # 只安装生产环境所需的依赖
-RUN npm install --only=production
+RUN npm install --only=production --ignore-scripts
 
 # 5. 将项目的所有代码复制到工作目录
 COPY . .
