@@ -1,3 +1,11 @@
+## [1.1.2](https://github.com/zzhan353/my-cicd-project-2/compare/v1.1.1...v1.1.2) (2025-09-25)
+
+
+### Bug Fixes
+
+* **ci:** use .cjs extension for commitlint config to resolve module conflict ([13cb2da](https://github.com/zzhan353/my-cicd-project-2/commit/13cb2daadacbf9952ba2f37ac90ec4a99b1de34f))
+* **ci:** Use .cjs extension for commitlint config to resolve module conflict ([f3851c1](https://github.com/zzhan353/my-cicd-project-2/commit/f3851c1a01ee2512f6cc994c3ccb8cd31a43bfc9))
+
 ## [1.1.1](https://github.com/zzhan353/my-cicd-project-2/compare/v1.1.0...v1.1.1) (2025-09-25)
 
 
