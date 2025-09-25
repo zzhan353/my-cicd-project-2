@@ -1,3 +1,11 @@
+## [1.1.1](https://github.com/zzhan353/my-cicd-project-2/compare/v1.1.0...v1.1.1) (2025-09-25)
+
+
+### Bug Fixes
+
+* **ci:** Use cross-env for platform-agnostic env variables in tests ([864a6fc](https://github.com/zzhan353/my-cicd-project-2/commit/864a6fc4029aedc9d276ea5647cca103dcc0ada5))
+* **ci:** Use cross-env for platform-agnostic env variables in tests ([28423c4](https://github.com/zzhan353/my-cicd-project-2/commit/28423c4ac9defe654c460bda2631471d4c335230))
+
 # [1.1.0](https://github.com/zzhan353/my-cicd-project-2/compare/v1.0.1...v1.1.0) (2025-09-24)
 
 
